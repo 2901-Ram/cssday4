@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Board </title>
+    <style>
+        body{
+            margin:0;
+            /* Applying box-sizing: border-box globally ensures that all elements (including pseudo-elements) behave consistently.
+              Helps you avoid layout bugs caused by padding/border size miscalculations. */
+            box-sizing: border-box;
+        }
+        h1{
+            color: green;
+            /* transition: color 0.10s, transform 0.10s */
+        }
+        
+        .main{
+            /* the below lines are  used to do a table or text  placed in the middle of the web page */
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);}
+               /*  the below  lines of the code are used to define the border 
+               and margin and text and also fontsize of the content in the table  */
+        table {
+            border: 1px solid;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 50px;
+        }
+        /* in the below added the hover property of the h1 tag and hover is used to the highlight the text when cursor points the text */
+        h1:hover{
+            background: rgb(231, 237, 57);
+            transform: scale(1.1);
+        }
+        /* in the below code tells to adding the property of the  column but not header column with in the table   */
+        td{
+            width: 70px;
+            height: 80px;
+            padding: 5px;
+        }
+        
+        /* th:hover{
+            font-size: 70px;
+            background:rgb(28, 155, 197);
+            outline: green;
+        }  */
+          /* in the below code i used combinators and also add hover property
+          by using ID name if you want apply styling using by id you can accesess by id with "#" symbol
+        i mentioned different id el1,el2,el7,el8 i used same properties*/
+        #el2>td:hover{
+            font-size: 60px;
+            background: rgb(28, 155, 197);
+            cursor: pointer;
+        }
+        #el7>td:hover{
+            font-size: 60px;
+            background: rgb(28, 155, 197);
+            cursor: pointer;
+        }
+        #el8>th:hover{
+            font-size: 60px;
+            background: rgb(28, 155, 197);
+            cursor: pointer;
+        }
+        /* hover property added remaining columns with in the table */
+        td:hover{
+            background: rgb(28, 155, 197);
+
+        }
+       #el1>th:hover{
+            font-size: 60px;
+            background:rgb(28, 155, 197);
+            cursor: pointer;
+            
+        }
+        td{
+            height: 60px;
+            cursor: pointer;
+        }
+        /*  */
+        #el1>th:nth-child(even){
+            background-color: rgb(168, 101, 46);
+            font-size: 54px;
+            /* height: 30px; */
+        }
+        #el2>td:nth-child(odd){
+            background-color:rgb(168, 101, 46) ;
+            font-size: 50px;
+            /* height: 30px;
+            padding: 0; */
+        }
+
+        #el3>td:nth-child(even){
+            background-color: rgb(168, 101, 46);
+            /* font-size: 64px; */
+
+        }
+        #el4>td:nth-child(odd){
+            background-color: rgb(168, 101, 46);
+            /* font-size: 64px; */
+
+        }
+        #el5>td:nth-child(even){
+            background-color: rgb(168, 101, 46);
+            /* font-size: 64px; */
+
+        }
+        #el6>td:nth-child(odd){
+            background-color:rgb(168, 101, 46);
+            /* font-size: 64px; */
+
+        }
+        
+        #el7>td:nth-child(even){
+            background-color: rgb(168, 101, 46);
+            font-size: 50px;
+            height: 45px;
+
+
+        }
+        
+        #el8>th:nth-child(odd){
+            background-color: rgb(168, 101, 46);
+            font-size: 54px;
+            height: 20px; 
+        }
+        
+    </style>
+</head>
+<body>
+    <center><h1 style="display: inline-block;">CHESS BOARD</h1></center>
+    <div class="main">
+<table>
+        <tr id="el1">
+            <th >&#9814;</th>
+            <th>&#9816;</th>
+            <th>&#9815;</th>
+            <th>&#9813;</th>
+            <th>&#9812;</th>
+            <th>&#9815;</th>
+            <th>&#9816;</th>
+            <th>&#9814;</td>
+        </tr>
+        <tr id="el2">
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td>
+            <td>&#9817;</td> 
+            <td>&#9817;</td>
+        </tr>
+        <tr id="el3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="el4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="el5">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="el6">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="el7">
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+            <td>&#9823;</td>
+        </tr>
+        <tr id="el8">
+            <th>&#9820;</th>
+            <th>&#9822;</th>
+            <th>&#9821;</th>
+            <th>&#9818;</th>
+            <th>&#9819;</th>
+            <th>&#9821;</th>
+            <th>&#9822;</th>
+            <th>&#9820;</td>
+        </tr>
+    </table></div>
+</body>
+</html>
